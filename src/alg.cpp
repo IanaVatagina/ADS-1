@@ -5,7 +5,7 @@
 
 bool checkPrime(uint64_t value) {
     bool flag = true;
-    double sqNum = sqrt((double) value);
+    double sqNum = sqrt(double (value));
     for (int i = 2; i <= sqNum; i++) {
         if (value % i == 0) {
             flag = false;
@@ -41,8 +41,8 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-    int summa = 0;
-    for (int i = 2; i < hbound; i++) {
+    uint64_t summa = 0;
+    for (int i = 2; i < hbound; ++i) {
         if (checkPrime(i)) {
             summa += i;
         }
