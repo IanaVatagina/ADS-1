@@ -5,7 +5,7 @@
 
 bool checkPrime(uint64_t value) {
     bool flag = true;
-    double sqNum = sqrt(double(value));
+    double sqNum = sqrt(static_cast<double>(value));
     for (int i = 2; i <= sqNum; i++) {
         if (value % i == 0) {
             flag = false;
